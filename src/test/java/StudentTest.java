@@ -38,4 +38,11 @@ public class StudentTest {
         assertEquals(77, bob.getGradeAverage(), 0);
     }
 
+    @Test
+    public void setGradeTest(){
+        Student bob = new Student("bob", 13);
+        bob.addGrade(76);
+        bob.addGrade(78);
+    }
+
 }

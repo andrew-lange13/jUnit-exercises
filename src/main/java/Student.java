@@ -1,10 +1,11 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Student {
 
-    protected long id;
-    protected String name;
-    protected ArrayList<Integer> grades = new ArrayList<>();
+    public long id;
+    public String name;
+    public ArrayList<Integer> grades = new ArrayList<>();
 
     public Student(String name, long id){
         this.id = id;
@@ -13,26 +14,28 @@ public class Student {
     }
 
     public long getId() {
-        return id;
+        return this.id;
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public void addGrade(int grade){
-        grades.add(grade);
+        this.grades.add(grade);
     }
 
     public ArrayList<Integer> getGrades() {
-        return grades;
+        return this.grades;
     }
 
     public double getGradeAverage(){
         double sum = 0;
-        for (Integer grade : grades){
+        for (Integer grade : this.grades){
             sum += grade;
         }
-        return sum / grades.size();
+        return sum / this.grades.size();
     }
+
+
 }
